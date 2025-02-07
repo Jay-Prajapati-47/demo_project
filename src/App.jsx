@@ -6,13 +6,15 @@ import "./App.css";
 import About from "./component/About.jsx";
 import Arrays from "./component/Arrays.jsx";
 import City from "./component/City.jsx";
+import SalesData from "./component/SalesData.jsx";
 
 function App() {
   return (
     <>
       <Header></Header>
       <Arrays />
-      <City />
+      {/* <City /> */}
+      <SalesData />
       {/* <About /> */}
       <Footer></Footer>
     </>
