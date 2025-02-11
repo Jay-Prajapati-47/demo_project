@@ -1,11 +1,11 @@
 import React from "react";
-// import pic from "../assets/pic.jpg";
+import pic from "../assets/pic.jpg";
 
 const About = () => {
   return (
     <div>
       <h1 style={{ margin: "15px", textAlign: "center", fontSize: "45px" }}>
-        About Our Compony
+        About Lucky Bhaskar
       </h1>
       <div style={{ display: "flex", gap: "20px", margin: "12px 20px" }}>
         <p style={{ margin: "15px", fontSize: "20px" }}>
