@@ -40,6 +40,30 @@ const Header = () => {
           <li>
             <Link to={"/contact-us"}>Contact us</Link>
           </li>
+          <li>
+            <Link to={"/play"}>Movies</Link>
+          </li>
+          <li>
+            <Link to={"/form1"}>Form1</Link>
+          </li>
+          <li>
+            <Link to={"/form2"}>Form2</Link>
+          </li>
+          <li>
+            <Link to={"/form3"}>Form3</Link>
+          </li>
+          <li>
+            <Link to={"/form4"}>Form4</Link>
+          </li>
+          <li>
+            <Link to={"/formdemo5"}>Form5</Link>
+          </li>
+          <li>
+            <Link to={"/form6"}>Form6</Link>
+          </li>
+          <li>
+            <Link to={"/form7"}>Form7</Link>
+          </li>
         </ul>
         <input
           type="text"
