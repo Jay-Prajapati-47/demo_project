@@ -2,9 +2,37 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const FormDemo7 = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const submitHandler = (data) => {
     console.log(data);
+  };
+
+  const validatorSchema = {
+    nameValidator: {
+      required: {
+        value: true,
+        message: "Name is required",
+      },
+    },
+    universityValidator: {
+      required: {
+        value: true,
+        message: "university is required",
+      },
+    },
+    emailValidator: {
+      required: { value: true, message: "Email is required" },
+    },
+    phoneValidator: {
+      required: { value: true, message: "Phone number is required" },
+    },
+    brandValidator: {
+      required: { value: true, message: "Brand is required" },
+    },
   };
   return (
     <div style={{ textAlign: "center" }}>
@@ -17,9 +45,9 @@ const FormDemo7 = () => {
           type="text"
           id="name"
           placeholder="Enter your name"
-          required
-          {...register("name")}
+          {...register("name", validatorSchema.nameValidator)}
         />
+        <span style={{ color: "red" }}>{errors.name?.message}</span>
 
         <label>Email:</label>
         <input
@@ -27,9 +55,9 @@ const FormDemo7 = () => {
           id="email"
           placeholder="Enter your email"
           oninput="validateEmail()"
-          required
-          {...register("email")}
+          {...register("email", validatorSchema.emailValidator)}
         />
+        <span style={{ color: "red" }}>{errors.email?.message}</span>
         <div class="error" id="emailError"></div>
 
         <label>Phone:</label>
@@ -38,9 +66,9 @@ const FormDemo7 = () => {
           id="phone"
           placeholder="Enter phone number"
           oninput="validatePhone()"
-          required
-          {...register("phone")}
+          {...register("phone", validatorSchema.phoneValidator)}
         />
+        <span style={{ color: "red" }}>{errors.phone?.message}</span>
         <div class="error" id="phoneError"></div>
 
         <label>Are you a Student or a Professional?</label>
@@ -56,8 +84,9 @@ const FormDemo7 = () => {
             type="text"
             id="university"
             placeholder="Enter your university"
-            {...register("university")}
+            {...register("university", validatorSchema.universityValidator)}
           />
+          <span style={{ color: "red" }}>{errors.university?.message}</span>
         </div>
 
         <div id="professionalFields" class="hidden">

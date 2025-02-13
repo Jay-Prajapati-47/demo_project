@@ -2,9 +2,41 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const FormDemo6 = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
   const submitHandler = (data) => {
     console.log(data);
+  };
+
+  const validatorSchema = {
+    nameValidator: {
+      required: {
+        value: true,
+        message: "Name is required",
+      },
+    },
+    emailValidator: {
+      required: { value: true, message: "Email is required" },
+    },
+    otpValidator1: {
+      required: { value: true, message: "otp number is required" },
+    },
+    otpValidator2: {
+      required: { value: true, message: "otp number is required" },
+    },
+    otpValidator3: {
+      required: { value: true, message: "otp number is required" },
+    },
+    otpValidator4: {
+      required: { value: true, message: "otp number is required" },
+    },
+    brandValidator: {
+      required: { value: true, message: "Brand is required" },
+    },
   };
   return (
     <div style={{ textAlign: "center" }}>
@@ -14,11 +46,19 @@ const FormDemo6 = () => {
       <form onSubmit={handleSubmit(submitHandler)}>
         <div>
           <label>Name:</label>
-          <input type="text" required {...register("name")} />
+          <input
+            type="text"
+            {...register("name1", validatorSchema.nameValidator)}
+          />
+          <span style={{ color: "red" }}>{errors.name1?.message}</span>
           <br />
 
           <label>Email:</label>
-          <input type="email" required {...register("email")} />
+          <input
+            type="email"
+            {...register("email", validatorSchema.emailValidator)}
+          />
+          <span style={{ color: "red" }}>{errors.email?.message}</span>
           <br />
         </div>
 
@@ -42,10 +82,23 @@ const FormDemo6 = () => {
 
         <div>
           <label>Enter OTP:</label>
-          <input maxlength="1" {...register("otp1")} />
-          <input maxlength="1" {...register("otp2")} />
-          <input maxlength="1" {...register("otp3")} />
-          <input maxlength="1" {...register("otp4")} />
+          <input
+            maxlength="1"
+            {...register("otp1", validatorSchema.otpValidator1)}
+          />
+          <input
+            maxlength="1"
+            {...register("otp2", validatorSchema.otpValidator2)}
+          />
+          <input
+            maxlength="1"
+            {...register("otp3", validatorSchema.otpValidator3)}
+          />
+          <input
+            maxlength="1"
+            {...register("otp4", validatorSchema.otpValidator4)}
+          />
+          <span style={{ color: "red" }}>{errors.otp1?.message}</span>
           <br />
         </div>
 
