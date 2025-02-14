@@ -13,6 +13,7 @@ import { FormDemo3 } from "./component/FormDemo3.jsx";
 import { FormDemo4 } from "./component/FormDemo4.jsx";
 import FormDemo6 from "./component/FormDemo6.jsx";
 import FormDemo7 from "./component/FormDemo7.jsx";
+import { FormTask1 } from "./component/FormTask1.jsx";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/form4" element={<FormDemo4 />}></Route>
         <Route path="/form6" element={<FormDemo6 />}></Route>
         <Route path="/form7" element={<FormDemo7 />}></Route>
+        <Route path="/form/task1" element={<FormTask1 />}></Route>
         <Route path="/formdemo5" element={<FormDemo5 />}></Route>
       </Routes>
     </>

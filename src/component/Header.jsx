@@ -64,6 +64,9 @@ const Header = () => {
           <li>
             <Link to={"/form7"}>Form7</Link>
           </li>
+          <li>
+            <Link to={"/form/task1"}>Task</Link>
+          </li>
         </ul>
         <input
           type="text"
