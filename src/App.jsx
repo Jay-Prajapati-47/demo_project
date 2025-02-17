@@ -14,16 +14,18 @@ import ContactUs from "./component/ContactUs.jsx";
 // import FormDemo6 from "./component/FormDemo6.jsx";
 // import FormDemo7 from "./component/FormDemo7.jsx";
 import Log from "./component/Log.jsx";
+import ApiDemo1 from "./Api/ApiDemo1.jsx";
+// import ApiDemo1 from "./Api/ApiDemo1.jsx";
 // import { FormTask1 } from "./component/FormTask1.jsx";
 
 function App() {
   return (
     <>
-      <Header></Header>
+      {/* <Header></Header> */}
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact-us" element={<ContactUs />}></Route>
+        {/* <Route path="/" element={<Home />}></Route> */}
+        {/* <Route path="/about" element={<About />}></Route> */}
+        {/* <Route path="/contact-us" element={<ContactUs />}></Route> */}
         {/* <Route path="/play" element={<Movies />}></Route>
         <Route path="/play/:id" element={<PlayMovie />}></Route>
         <Route path="/form1" element={<FormDemo1 />}></Route>
@@ -35,6 +37,7 @@ function App() {
         <Route path="/form/task1" element={<FormTask1 />}></Route>
         <Route path="/formdemo5" element={<FormDemo5 />}></Route> */}
         <Route path="/login" element={<Log />}></Route>
+        <Route path="/api" element={<ApiDemo1 />}></Route>
       </Routes>
     </>
   );

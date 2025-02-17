@@ -116,7 +116,7 @@ const AuthForm = () => {
               width: "100%",
               padding: "10px",
               backgroundColor: "#e65100",
-              color: "black",
+              color: "#ffffff",
               border: "none",
               borderRadius: "5px",
               cursor: "pointer",
