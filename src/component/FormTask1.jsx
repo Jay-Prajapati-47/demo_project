@@ -50,7 +50,7 @@ export const FormTask1 = () => {
         <div>
           <label>Contact No:</label>
           <input
-            type="text"
+            type="tel"
             {...register("ContactNo", validationSchema.phoneNoValidation)}
           />
           <span style={{ color: "red" }}>{errors.ContactNo?.message}</span>
