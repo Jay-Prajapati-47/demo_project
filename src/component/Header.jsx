@@ -10,6 +10,7 @@ const Header = () => {
         width: "100%",
         backgroundColor: "#66B2FF",
         padding: "20px 0",
+        zIndex: "1",
       }}
     >
       <div
@@ -40,10 +41,10 @@ const Header = () => {
           <li>
             <Link to={"/contact-us"}>Contact us</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to={"/play"}>Movies</Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link to={"/form1"}>Form1</Link>
           </li>
           <li>
@@ -66,6 +67,15 @@ const Header = () => {
           </li>
           <li>
             <Link to={"/form/task1"}>Task</Link>
+          </li> */}
+          <li>
+            <Link to={"/movies"}>Movies</Link>
+          </li>
+          <li>
+            <Link to={"/post"}>postdata</Link>
+          </li>
+          <li>
+            <Link to={"/post1"}>postdata1</Link>
           </li>
         </ul>
         <input

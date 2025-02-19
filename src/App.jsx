@@ -15,13 +15,19 @@ import ContactUs from "./component/ContactUs.jsx";
 // import FormDemo7 from "./component/FormDemo7.jsx";
 import Log from "./component/Log.jsx";
 import ApiDemo1 from "./Api/ApiDemo1.jsx";
+import Movies from "./Movies/Movies.jsx";
+import MovieDetails from "./Movies/MovieDetails.jsx";
+import Navbar from "./IMDb/Navbar.jsx";
+import PostDemo1 from "./POST/PostDemo1.jsx";
+import PostDemo2 from "./POST/PostDemo2.jsx";
 // import ApiDemo1 from "./Api/ApiDemo1.jsx";
 // import { FormTask1 } from "./component/FormTask1.jsx";
 
 function App() {
   return (
     <>
-      {/* <Header></Header> */}
+      <Header></Header>
+      {/* <Navbar></Navbar> */}
       <Routes>
         {/* <Route path="/" element={<Home />}></Route> */}
         {/* <Route path="/about" element={<About />}></Route> */}
@@ -37,7 +43,11 @@ function App() {
         <Route path="/form/task1" element={<FormTask1 />}></Route>
         <Route path="/formdemo5" element={<FormDemo5 />}></Route> */}
         <Route path="/login" element={<Log />}></Route>
+        <Route path="/post" element={<PostDemo1 />}></Route>
+        <Route path="/post1" element={<PostDemo2 />}></Route>
         <Route path="/api" element={<ApiDemo1 />}></Route>
+        <Route path="/movies" element={<Movies />}></Route>
+        <Route path="/movies/:id" element={<MovieDetails />}></Route>
       </Routes>
     </>
   );
